@@ -1,0 +1,11 @@
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\bin\Debug\BAI_1_1_TongQuanWindowForm.exe.config
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\bin\Debug\BAI_1_1_TongQuanWindowForm.exe
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\bin\Debug\BAI_1_1_TongQuanWindowForm.pdb
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.csproj.AssemblyReference.cache
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.csproj.SuggestedBindingRedirects.cache
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.Form1.resources
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.Properties.Resources.resources
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.csproj.GenerateResource.cache
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.csproj.CoreCompileInputs.cache
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.exe
+F:\OneDrive - FPT EDUCATION\8. Demo\Demo C#1\SM22_BLOCK2\6_IT18102_NET101_BL2_SM22\7_IT17329_NET103_BL2_SM22\BAI_1_1_TongQuanWindowForm\obj\Debug\BAI_1_1_TongQuanWindowForm.pdb
