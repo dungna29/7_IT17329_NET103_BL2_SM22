@@ -9,6 +9,7 @@ namespace BAI_1_1_TongQuanWindowForm
     internal class QLPhimService
     {
         private List<PhimAnh> _lstPhimAnhs;
+
         public QLPhimService()
         {
             _lstPhimAnhs = new List<PhimAnh>();
@@ -16,9 +17,11 @@ namespace BAI_1_1_TongQuanWindowForm
 
         public string Add(PhimAnh pa)
         {
+            pa.Id = Guid.NewGuid();//Khởi tạo khá chính khi thêm mới
             _lstPhimAnhs.Add(pa);
             return "Thêm thành công";
         }
+
         public string Update(PhimAnh pa)
         {
             int index = _lstPhimAnhs.FindIndex(c => c.Id == pa.Id);
@@ -29,6 +32,7 @@ namespace BAI_1_1_TongQuanWindowForm
             _lstPhimAnhs[index] = pa;
             return "Sửa thành công";
         }
+
         public string Delete(PhimAnh pa)
         {
             int index = _lstPhimAnhs.FindIndex(c => c.Id == pa.Id);
@@ -44,9 +48,14 @@ namespace BAI_1_1_TongQuanWindowForm
         {
             return _lstPhimAnhs;
         }
+
         public List<PhimAnh> GetAll(string input)
         {
-            return _lstPhimAnhs.Where(c => c.Ten.StartsWith(input) || c.MaPhim.StartsWith(input)).ToList();
+            if (string.IsNullOrEmpty(input))
+            {
+                return GetAll();
+            }
+            return _lstPhimAnhs.Where(c => c.Ten.ToLower().StartsWith(input.ToLower()) || c.MaPhim.ToLower().StartsWith(input.ToLower())).ToList();
         }
 
         public void FakeData()
@@ -61,8 +70,7 @@ namespace BAI_1_1_TongQuanWindowForm
 
         public List<string> GetAllTLPhim()
         {
-            return new List<string>() {"12+","16+","18+","21+","61+" };
+            return new List<string>() { "12+", "16+", "18+", "21+", "61+" };
         }
-
     }
 }
