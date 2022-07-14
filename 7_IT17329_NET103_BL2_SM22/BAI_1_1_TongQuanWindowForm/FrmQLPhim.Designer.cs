@@ -45,6 +45,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrid_Phim)).BeginInit();
             this.panel3.SuspendLayout();
@@ -87,6 +90,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txt_MaPhim);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -208,6 +213,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_Xoa);
             this.panel1.Controls.Add(this.btn_Sua);
             this.panel1.Controls.Add(this.btn_Them);
@@ -221,9 +227,9 @@
             // 
             this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.Location = new System.Drawing.Point(0, 202);
+            this.btn_Xoa.Location = new System.Drawing.Point(0, 196);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(402, 101);
+            this.btn_Xoa.Size = new System.Drawing.Size(402, 53);
             this.btn_Xoa.TabIndex = 2;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
@@ -235,11 +241,42 @@
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.Location = new System.Drawing.Point(0, 101);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(402, 101);
+            this.btn_Sua.Size = new System.Drawing.Size(402, 95);
             this.btn_Sua.TabIndex = 1;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 263);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 25);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tình trạng:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(149, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 25);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Tình trạng:";
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(402, 53);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Giải trí";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmQLPhim
             // 
@@ -279,5 +316,8 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.TextBox txt_MaPhim;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

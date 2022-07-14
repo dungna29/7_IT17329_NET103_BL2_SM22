@@ -1,0 +1,2 @@
+﻿1. Tạo tài khoản ở SQL SERVER bằng tài khoản MSV và PASS: 123456
+2. Mở Data Source.
