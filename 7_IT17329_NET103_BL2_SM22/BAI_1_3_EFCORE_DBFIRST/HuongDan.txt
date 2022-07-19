@@ -1,0 +1,17 @@
+﻿EF Database FIRST
+1. Cần phải có tạo CSDL trước và có bảng ở bên trong.
+2. Cài đặt Package EF CORE:
+	+ Install-Package Microsoft.EntityFrameworkCore
+	+ Install-Package Microsoft.EntityFrameworkCore.SqlServer
+	+ Install-Package Microsoft.EntityFrameworkCore.Tools
+
+3. Tools => NuGet => Package Manager Console (Nơi để gõ lệnh) - Trước khi gõ thì chọn Default Project là project cần chạy
+	+ Câu lệnh sau: Scaffold-DbContext 'MỜI ANH CHỊ COPY ĐƯỜNG DẪN VÀO ĐÂY' Microsoft.EntityFrameworkCore.SqlServer -OutputDir DomainClass -context FpolyDBContext -Contextdir Context -DataAnnotations -Force
+	+ Ví dụ: Scaffold-DbContext 'Data Source=DUNGNAPC\SQLEXPRESS;Initial Catalog=FINALASS_FPOLYSHOP_SM22_BL2_DUNGNA29;Persist Security Info=True;User ID=dungna34;Password=123456' Microsoft.EntityFrameworkCore.SqlServer -OutputDir DomainClass -context FpolyDBContext -Contextdir Context -DataAnnotations -Force
+
+4. Để thực thi được câu lệnh:
+	+ Toàn bộ solution không được phép 1 file đỏ.
+	+ Chọn đúng project cần làm việc.
+	+ Set project muốn sử dụng EF chạy chính
+	+ Default project trong PM phải set project EF.
+
