@@ -4,14 +4,16 @@ using BAI_1_4_EFCORE_CODEFIRST.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
 {
     [DbContext(typeof(FpolyDBContext))]
-    partial class FpolyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220723080630_230722_FPOLY")]
+    partial class _230722_FPOLY
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

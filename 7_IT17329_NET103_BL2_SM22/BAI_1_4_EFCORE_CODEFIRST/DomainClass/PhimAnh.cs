@@ -16,7 +16,6 @@ namespace BAI_1_4_EFCORE_CODEFIRST.DomainClass
         public string Ten { get; set; }
 
         public string MaPhim { get; set; }
-        public string TheLoaiPhim { get; set; }
         public int TrangThai { get; set; }
 
         [ForeignKey("Id_TheLoaiPhim")]

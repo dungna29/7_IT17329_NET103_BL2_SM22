@@ -15,6 +15,6 @@ namespace BAI_1_4_EFCORE_CODEFIRST.DomainClass
         [StringLength(100)]
         public string Ten { get; set; }
 
-        public string MaPhim { get; set; }
+        public string Ma { get; set; }
     }
 }
