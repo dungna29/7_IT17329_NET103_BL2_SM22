@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
 {
     [DbContext(typeof(FpolyDBContext))]
-    [Migration("20220721090332_TaoQuanHe2107221640")]
-    partial class TaoQuanHe2107221640
+    [Migration("20220723100842_230722_FPOLY4")]
+    partial class _230722_FPOLY4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("Id_TheLoaiPhim")
+                    b.Property<Guid>("Id_TheLoaiPhim")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("MaPhim")
@@ -37,15 +37,15 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("TheLoaiPhim")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid?>("TheLoaiPhimsId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_TheLoaiPhim");
+                    b.HasIndex("TheLoaiPhimsId");
 
                     b.ToTable("PhimAnh");
                 });
@@ -56,7 +56,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("MaPhim")
+                    b.Property<string>("Ma")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ten")
@@ -72,7 +72,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                 {
                     b.HasOne("BAI_1_4_EFCORE_CODEFIRST.DomainClass.TheLoaiPhim", "TheLoaiPhims")
                         .WithMany()
-                        .HasForeignKey("Id_TheLoaiPhim");
+                        .HasForeignKey("TheLoaiPhimsId");
 
                     b.Navigation("TheLoaiPhims");
                 });

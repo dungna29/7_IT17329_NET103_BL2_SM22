@@ -18,7 +18,8 @@ namespace BAI_1_4_EFCORE_CODEFIRST.DomainClass
         public string MaPhim { get; set; }
         public int TrangThai { get; set; }
 
-        [ForeignKey("Id_TheLoaiPhim")]
+        public Guid Id_TheLoaiPhim { get; set; }
+
         public TheLoaiPhim TheLoaiPhims { get; set; }
     }
 }

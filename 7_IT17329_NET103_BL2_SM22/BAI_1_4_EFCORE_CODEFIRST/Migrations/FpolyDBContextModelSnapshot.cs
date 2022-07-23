@@ -25,7 +25,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("Id_TheLoaiPhim")
+                    b.Property<Guid>("Id_TheLoaiPhim")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("MaPhim")
@@ -35,12 +35,15 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<Guid?>("TheLoaiPhimsId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_TheLoaiPhim");
+                    b.HasIndex("TheLoaiPhimsId");
 
                     b.ToTable("PhimAnh");
                 });
@@ -67,7 +70,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Migrations
                 {
                     b.HasOne("BAI_1_4_EFCORE_CODEFIRST.DomainClass.TheLoaiPhim", "TheLoaiPhims")
                         .WithMany()
-                        .HasForeignKey("Id_TheLoaiPhim");
+                        .HasForeignKey("TheLoaiPhimsId");
 
                     b.Navigation("TheLoaiPhims");
                 });

@@ -84,7 +84,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Services
 
         public List<TheLoaiPhim> GetAllTLPhim()
         {
-            return _TLPARepository.GetAll();
+            return _TLPARepository.GetAll().ToList();
         }
     }
 }

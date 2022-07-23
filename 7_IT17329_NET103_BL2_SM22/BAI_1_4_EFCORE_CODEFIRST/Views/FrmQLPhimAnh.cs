@@ -51,8 +51,8 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Views
             dgrid_PhimAnh.Rows.Clear();//Xóa toàn bộ các row có trong grid khi load lại
             foreach (var x in _qlPhimService.GetAll(input))
             {
-                var tlp = x.TheLoaiPhims.Ma;
-                dgrid_PhimAnh.Rows.Add(stt++, x.Id, x.Ten, x.MaPhim, tlp,
+                var MaTL = _qlPhimService.GetAllTLPhim().FirstOrDefault(c => c.Id == x.Id_TheLoaiPhim);
+                dgrid_PhimAnh.Rows.Add(stt++, x.Id, x.Ten, x.MaPhim, MaTL.Ma,
                     (x.TrangThai == 1 ? "Hoạt động" : "Không hoạt động"));
             }
         }
@@ -60,7 +60,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Views
         private PhimAnh GetDataFromGui()
         {
             TheLoaiPhim tlp = _qlPhimService.GetAllTLPhim().FirstOrDefault(c => c.Ma == cmb_TheLoai.Text);
-            return new PhimAnh() { Id = Guid.Empty, MaPhim = txt_Ma.Text, Ten = txt_Ten.Text, TheLoaiPhims = tlp, TrangThai = (rbtn_HoatDong.Checked ? 1 : 0) };
+            return new PhimAnh() { Id = Guid.Empty, MaPhim = txt_Ma.Text, Ten = txt_Ten.Text, TheLoaiPhims = tlp, Id_TheLoaiPhim = tlp.Id, TrangThai = (rbtn_HoatDong.Checked ? 1 : 0) };
             //Id = Guid.Empty vì nếu là thêm mới thì bên Service sẽ tự sinh khóa chính còn nếu trong trường hợp update thì sẽ được gán khóa chính sau
         }
 
