@@ -59,6 +59,7 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Views
 
         private PhimAnh GetDataFromGui()
         {
+            var temp1 = cmb_TheLoai.Text;
             TheLoaiPhim tlp = _qlPhimService.GetAllTLPhim().FirstOrDefault(c => c.Ma == cmb_TheLoai.Text);
             return new PhimAnh() { Id = Guid.Empty, MaPhim = txt_Ma.Text, Ten = txt_Ten.Text, TheLoaiPhims = tlp, Id_TheLoaiPhim = tlp.Id, TrangThai = (rbtn_HoatDong.Checked ? 1 : 0) };
             //Id = Guid.Empty vì nếu là thêm mới thì bên Service sẽ tự sinh khóa chính còn nếu trong trường hợp update thì sẽ được gán khóa chính sau

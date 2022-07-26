@@ -31,7 +31,10 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Repositories
         {
             if (obj == null) return false;
             var tempobj = _dbContext.PhimAnhs.FirstOrDefault(c => c.Id == obj.Id);
-            tempobj = obj;
+            tempobj.MaPhim = obj.MaPhim;
+            tempobj.Ten = obj.Ten;
+            tempobj.TrangThai = obj.TrangThai;
+            tempobj.Id_TheLoaiPhim = obj.Id_TheLoaiPhim;
             _dbContext.Update(tempobj);
             _dbContext.SaveChanges();
             return true;
