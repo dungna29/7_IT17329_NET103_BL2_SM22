@@ -75,5 +75,42 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Views
         {
             txt_Ma.Text = Utility.GetMaTuSinh(txt_Ten.Text) + _qlPhimService.GetAll().Count;
         }
+
+        private void dgrid_PhimAnh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowindex = e.RowIndex;
+            if (rowindex == _qlPhimService.GetAll().Count) return;
+            _idWhenClick = Guid.Parse(dgrid_PhimAnh.Rows[rowindex].Cells[1].Value.ToString());
+            var phim = _qlPhimService.GetAll().FirstOrDefault(c => c.Id == _idWhenClick);//Trả về 1 đối tượng tương ứng với khóa chính
+            txt_Ten.Text = phim.Ten;
+            cmb_TheLoai.SelectedIndex = cmb_TheLoai.FindStringExact(_qlPhimService.GetAllTLPhim().FirstOrDefault(c => c.Id == phim.Id_TheLoaiPhim).Ma.ToString());
+            txt_Ma.Text = phim.MaPhim;
+            if (phim.TrangThai == 1)
+            {
+                rbtn_HoatDong.Checked = true;
+                return;
+            }
+            rbtn_KoHoatDong.Checked = true;
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            var temp = GetDataFromGui();
+            temp.Id = _idWhenClick;
+            MessageBox.Show(_qlPhimService.Update(temp));
+            LoadDataPhim(null);
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            var temp = GetDataFromGui();
+            temp.Id = _idWhenClick;
+            MessageBox.Show(_qlPhimService.Delete(temp));
+            LoadDataPhim(null);
+        }
+
+        private void dgrid_PhimAnh_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

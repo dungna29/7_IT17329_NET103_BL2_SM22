@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_Them = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_Ten = new System.Windows.Forms.TextBox();
-            this.cmb_TheLoai = new System.Windows.Forms.ComboBox();
-            this.dgrid_PhimAnh = new System.Windows.Forms.DataGridView();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.btn_Xoa = new System.Windows.Forms.Button();
             this.txt_TimKiem = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_Ma = new System.Windows.Forms.TextBox();
-            this.rbtn_HoatDong = new System.Windows.Forms.RadioButton();
+            this.dgrid_PhimAnh = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Xoa = new System.Windows.Forms.Button();
+            this.btn_Sua = new System.Windows.Forms.Button();
+            this.btn_Them = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbtn_KoHoatDong = new System.Windows.Forms.RadioButton();
+            this.rbtn_HoatDong = new System.Windows.Forms.RadioButton();
+            this.txt_Ma = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmb_TheLoai = new System.Windows.Forms.ComboBox();
+            this.txt_Ten = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_PhimAnh)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_PhimAnh)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,6 +63,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // txt_TimKiem
+            // 
+            this.txt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_TimKiem.Location = new System.Drawing.Point(22, 31);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Size = new System.Drawing.Size(436, 39);
+            this.txt_TimKiem.TabIndex = 2;
+            // 
+            // dgrid_PhimAnh
+            // 
+            this.dgrid_PhimAnh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgrid_PhimAnh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrid_PhimAnh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgrid_PhimAnh.Location = new System.Drawing.Point(3, 76);
+            this.dgrid_PhimAnh.Name = "dgrid_PhimAnh";
+            this.dgrid_PhimAnh.RowTemplate.Height = 25;
+            this.dgrid_PhimAnh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgrid_PhimAnh.Size = new System.Drawing.Size(1005, 150);
+            this.dgrid_PhimAnh.TabIndex = 0;
+            this.dgrid_PhimAnh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrid_PhimAnh_CellContentClick);
+            this.dgrid_PhimAnh.Click += new System.EventHandler(this.dgrid_PhimAnh_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btn_Xoa);
@@ -75,6 +97,42 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // btn_Xoa
+            // 
+            this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Xoa.Location = new System.Drawing.Point(3, 127);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(481, 54);
+            this.btn_Xoa.TabIndex = 2;
+            this.btn_Xoa.Text = "Xóa";
+            this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
+            // 
+            // btn_Sua
+            // 
+            this.btn_Sua.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Sua.Location = new System.Drawing.Point(3, 73);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(481, 54);
+            this.btn_Sua.TabIndex = 1;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
+            // 
+            // btn_Them
+            // 
+            this.btn_Them.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Them.Location = new System.Drawing.Point(3, 19);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(481, 54);
+            this.btn_Them.TabIndex = 0;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // groupBox3
             // 
@@ -95,123 +153,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // btn_Them
+            // rbtn_KoHoatDong
             // 
-            this.btn_Them.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Them.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Them.Location = new System.Drawing.Point(3, 19);
-            this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(481, 54);
-            this.btn_Them.TabIndex = 0;
-            this.btn_Them.Text = "Thêm";
-            this.btn_Them.UseVisualStyleBackColor = true;
-            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(22, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên:";
-            // 
-            // txt_Ten
-            // 
-            this.txt_Ten.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Ten.Location = new System.Drawing.Point(145, 27);
-            this.txt_Ten.Name = "txt_Ten";
-            this.txt_Ten.Size = new System.Drawing.Size(222, 39);
-            this.txt_Ten.TabIndex = 1;
-            this.txt_Ten.TextChanged += new System.EventHandler(this.txt_Ten_TextChanged);
-            // 
-            // cmb_TheLoai
-            // 
-            this.cmb_TheLoai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cmb_TheLoai.FormattingEnabled = true;
-            this.cmb_TheLoai.Location = new System.Drawing.Point(145, 203);
-            this.cmb_TheLoai.Name = "cmb_TheLoai";
-            this.cmb_TheLoai.Size = new System.Drawing.Size(222, 40);
-            this.cmb_TheLoai.TabIndex = 2;
-            // 
-            // dgrid_PhimAnh
-            // 
-            this.dgrid_PhimAnh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrid_PhimAnh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgrid_PhimAnh.Location = new System.Drawing.Point(3, 76);
-            this.dgrid_PhimAnh.Name = "dgrid_PhimAnh";
-            this.dgrid_PhimAnh.RowTemplate.Height = 25;
-            this.dgrid_PhimAnh.Size = new System.Drawing.Size(1005, 150);
-            this.dgrid_PhimAnh.TabIndex = 0;
-            // 
-            // btn_Sua
-            // 
-            this.btn_Sua.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Sua.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Sua.Location = new System.Drawing.Point(3, 73);
-            this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(481, 54);
-            this.btn_Sua.TabIndex = 1;
-            this.btn_Sua.Text = "Sửa";
-            this.btn_Sua.UseVisualStyleBackColor = true;
-            // 
-            // btn_Xoa
-            // 
-            this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btn_Xoa.Location = new System.Drawing.Point(3, 127);
-            this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(481, 54);
-            this.btn_Xoa.TabIndex = 2;
-            this.btn_Xoa.Text = "Xóa";
-            this.btn_Xoa.UseVisualStyleBackColor = true;
-            // 
-            // txt_TimKiem
-            // 
-            this.txt_TimKiem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_TimKiem.Location = new System.Drawing.Point(22, 31);
-            this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(436, 39);
-            this.txt_TimKiem.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(22, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Mã:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(22, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Thể loại:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(22, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 32);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Trạng thái:";
-            // 
-            // txt_Ma
-            // 
-            this.txt_Ma.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txt_Ma.Location = new System.Drawing.Point(145, 84);
-            this.txt_Ma.Name = "txt_Ma";
-            this.txt_Ma.Size = new System.Drawing.Size(222, 39);
-            this.txt_Ma.TabIndex = 6;
+            this.rbtn_KoHoatDong.AutoSize = true;
+            this.rbtn_KoHoatDong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbtn_KoHoatDong.Location = new System.Drawing.Point(145, 169);
+            this.rbtn_KoHoatDong.Name = "rbtn_KoHoatDong";
+            this.rbtn_KoHoatDong.Size = new System.Drawing.Size(220, 36);
+            this.rbtn_KoHoatDong.TabIndex = 8;
+            this.rbtn_KoHoatDong.TabStop = true;
+            this.rbtn_KoHoatDong.Text = "Không hoạt động";
+            this.rbtn_KoHoatDong.UseVisualStyleBackColor = true;
             // 
             // rbtn_HoatDong
             // 
@@ -225,17 +177,71 @@
             this.rbtn_HoatDong.Text = "Hoạt động";
             this.rbtn_HoatDong.UseVisualStyleBackColor = true;
             // 
-            // rbtn_KoHoatDong
+            // txt_Ma
             // 
-            this.rbtn_KoHoatDong.AutoSize = true;
-            this.rbtn_KoHoatDong.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rbtn_KoHoatDong.Location = new System.Drawing.Point(145, 169);
-            this.rbtn_KoHoatDong.Name = "rbtn_KoHoatDong";
-            this.rbtn_KoHoatDong.Size = new System.Drawing.Size(220, 36);
-            this.rbtn_KoHoatDong.TabIndex = 8;
-            this.rbtn_KoHoatDong.TabStop = true;
-            this.rbtn_KoHoatDong.Text = "Không hoạt động";
-            this.rbtn_KoHoatDong.UseVisualStyleBackColor = true;
+            this.txt_Ma.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Ma.Location = new System.Drawing.Point(145, 84);
+            this.txt_Ma.Name = "txt_Ma";
+            this.txt_Ma.Size = new System.Drawing.Size(222, 39);
+            this.txt_Ma.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(22, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 32);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Trạng thái:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(22, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 32);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Thể loại:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(22, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 32);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Mã:";
+            // 
+            // cmb_TheLoai
+            // 
+            this.cmb_TheLoai.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cmb_TheLoai.FormattingEnabled = true;
+            this.cmb_TheLoai.Location = new System.Drawing.Point(145, 203);
+            this.cmb_TheLoai.Name = "cmb_TheLoai";
+            this.cmb_TheLoai.Size = new System.Drawing.Size(222, 40);
+            this.cmb_TheLoai.TabIndex = 2;
+            // 
+            // txt_Ten
+            // 
+            this.txt_Ten.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txt_Ten.Location = new System.Drawing.Point(145, 27);
+            this.txt_Ten.Name = "txt_Ten";
+            this.txt_Ten.Size = new System.Drawing.Size(222, 39);
+            this.txt_Ten.TabIndex = 1;
+            this.txt_Ten.TextChanged += new System.EventHandler(this.txt_Ten_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(22, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên:";
             // 
             // FrmQLPhimAnh
             // 
@@ -249,10 +255,10 @@
             this.Text = "FrmQLPhimAnh";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrid_PhimAnh)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrid_PhimAnh)).EndInit();
             this.ResumeLayout(false);
 
         }

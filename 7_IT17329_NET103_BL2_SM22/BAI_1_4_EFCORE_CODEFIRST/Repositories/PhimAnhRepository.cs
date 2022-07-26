@@ -30,7 +30,9 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Repositories
         public bool Update(PhimAnh obj)
         {
             if (obj == null) return false;
-            _dbContext.Update(obj);
+            var tempobj = _dbContext.PhimAnhs.FirstOrDefault(c => c.Id == obj.Id);
+            tempobj = obj;
+            _dbContext.Update(tempobj);
             _dbContext.SaveChanges();
             return true;
         }
@@ -38,7 +40,8 @@ namespace BAI_1_4_EFCORE_CODEFIRST.Repositories
         public bool Delete(PhimAnh obj)
         {
             if (obj == null) return false;
-            _dbContext.Remove(obj);
+            var tempobj = _dbContext.PhimAnhs.FirstOrDefault(c => c.Id == obj.Id);
+            _dbContext.Remove(tempobj);
             _dbContext.SaveChanges();
             return true;
         }
